@@ -1,0 +1,197 @@
+.promotions {
+	.hero {
+		height: calc(100vh - 190px);
+
+		@media screen and (max-width: $medium) {
+			height: auto;
+		}
+		.page-wrapper {
+			max-width: none;
+			height: 100%;
+
+			.row {
+				height: 100%;
+
+				@media screen and (max-width: $medium) {
+					flex-direction: column-reverse;
+				}
+			}
+		}
+		&__img {
+			display: flex;
+			justify-content: center;
+			height: 100%;
+
+			@media screen and (max-width: $small) {
+				padding: 0px;
+			}
+			img {
+				width: 100%;
+				align-self: flex-end;
+				max-height: 756px;
+				max-width: 770px;
+			}
+		}
+		&__text {
+			display: flex;
+			height: 100%;
+
+			@media screen and (max-width: $medium) {
+				margin-bottom: 50px;
+			}
+			> div {
+				width: 100%;
+				align-self: center;
+			}
+			img {
+				width: 100%;
+				max-width: 28.646vw;
+
+				@media screen and (max-width: $medium) {
+					max-width: 270px;
+				}
+			}
+			h1 {
+				font-weight: bold;
+				margin-top: 8px;
+				margin-left: -8px;
+				margin-bottom: 50px;
+
+				@media screen and (max-width: $medium) {
+					margin-top: 5px;
+					margin-left: -.6%;
+					margin-bottom: 40px;
+				}
+			}
+			p {
+				color: #4F4F4F;
+				max-width: 400px;
+				margin-bottom: 40px;
+
+				@media screen and (max-width: $medium) {
+					margin-bottom: 30px;
+				}
+				@media screen and (max-width: $small) {
+					max-width: none;
+				}
+			}
+			.btn-green {
+				padding: 22px 40px;
+			}
+		}
+	}
+	.coupon-modal {
+		background-color: rgba(66, 90, 35, .75);
+		padding-right: 0px !important;
+
+		.modal-dialog {
+			@media screen and (max-width: $small) {
+				margin: 65px 25px 35px;
+			}
+		}
+		.modal-content {
+			background-color: transparent;
+			border: none;
+			border-radius: 0px;
+		}
+		.modal-body {
+			padding: 0px;
+
+			.coupon-img {
+				margin-bottom: 35px;
+
+				img {
+					width: 100%;
+				}
+			}
+			.btn-green {
+				padding: 22px 60px;
+			}
+		}
+		.close {
+			color: $white;
+			opacity: 1;
+			text-shadow: none;
+			outline: none;
+			position: absolute;
+			top: -9px;
+			right: -40px;
+			font-size: 31px;
+
+			@media screen and (max-width: $small) {
+				top: -50px;
+				right: auto;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+	.form-modal {
+		background-color: rgba(66, 90, 35, .75);
+		padding-right: 0px !important;
+
+		.modal-xl {
+			max-width: 1140px !important;
+			margin: 35px auto;
+			padding: 0px 25px;
+		}
+		.modal-content {
+			background-color: $light-green;
+			border: none;
+			border-radius: 44px;
+		}
+		.modal-body {
+			padding: 80px;
+
+			@media screen and (max-width: $medium) {
+				padding: 90px 60px 60px;
+			}
+			@media screen and (max-width: $small) {
+				padding: 90px 25px 45px;
+			}
+			input {
+				&[type="submit"] {
+					width: 100%;
+				}
+			}
+			.form-text {
+				@media screen and (max-width: $small) {
+					margin-bottom: 45px;
+				}
+			}
+		}
+		.close {
+			color: $white;
+			opacity: 1;
+			text-shadow: none;
+			outline: none;
+			position: absolute;
+			top: 50px;
+			right: 50px;
+			font-size: 31px;
+
+			@media screen and (max-width: $medium) {
+				top: 35px;
+				right: 35px;
+			}
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+	.recipes-fullpage, .recipes-fullpage-mobile {
+		.deals-wtb__text__deals {
+			display: none;
+		}
+	}
+	.recipes-fullpage-mobile {
+		.deals-wtb {
+			.cantaloupe-illustration {
+				margin-top: 0px;
+			}
+		}
+	}
+}

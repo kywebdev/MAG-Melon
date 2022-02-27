@@ -1,0 +1,766 @@
+.recipes-fullpage {
+	margin-bottom: 20px;
+
+	@media screen and (max-width: $small) {
+		display: none;
+	}
+	&__container {
+		position: relative;
+
+		.orange-bg {
+			width: 100%;
+			height: 100vh;
+			position: absolute;
+			overflow: hidden;
+
+			.circle {
+				background-color: $orange;
+				width: 120vw;
+				height: 120vw;
+				border-radius: 50%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				transition: 2s ease;
+
+				@media screen and (max-width: 1400px) {
+					width: 150vw;
+					height: 150vw;
+				}
+				@media screen and (max-width: 850px) {
+					width: 200vw;
+					height: 200vw;
+				}
+				&.circle-fadeout {
+					width: 0vw;
+					height: 0vw;
+				}
+			}
+		}
+		.cantaloupe-img {
+			position: relative;
+			z-index: 2;
+			height: 100vh;
+
+			img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 90%;
+				max-width: 572px;
+
+				@media screen and (max-width: 1400px) {
+					max-width: 40.857vw;
+				}
+				@media screen and (max-width: $medium) {
+					max-width: 35vw;
+				}
+			}
+		}
+		.recipes-text {
+			position: relative;
+			z-index: 2;
+			height: 100vh;
+			margin-top: -30vh;
+			
+			p {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				font-size: 260px;
+				font-weight: 800;
+				letter-spacing: -15px;
+				text-align: center;
+				color: $white;
+				text-transform: uppercase;
+				opacity: 1;
+				visibility: visible;
+				transition: .5s ease;
+
+				@media screen and (max-width: $large) {
+					font-size: 21.667vw;
+					letter-spacing: -1.250vw;
+					top: 40%;
+				}
+				&.hide {
+					opacity: 0;
+					visibility: hidden;
+				}
+			}
+		}
+		.recipes-button {
+			position: relative;
+			z-index: 4;
+			
+			.recipes-view-more {
+				position: absolute;
+				bottom: 60px;
+				left: 50%;
+				transform: translateX(-50%);
+				padding: 25px 55px;
+				width: 195px;
+				opacity: 1;
+				visibility: visible;
+				transition: background-color .3s ease-in-out opacity .5s ease-in-out;
+
+				&.fadeout {
+					opacity: 0;
+					visibility: hidden;
+				}
+				&.hide {
+					opacity: 0;
+					visibility: hidden;
+				}
+			}
+		}
+		.recipe-circles {
+			position: absolute;
+			top: 0px;
+			left: 50%;
+			z-index: 3;
+			max-width: 1050px;
+			width: 100%;
+			height: 100vh;
+			transform: translateX(-50%);
+			
+			@media screen and (max-height: 850px) {
+				max-width: 1120px;
+			}
+			@media screen and (max-width: $large) {
+				max-width: 87.500vw;
+			}
+			@media screen and (max-height: 850px) and (max-width: $large) {
+				max-width: 1120px;
+			}
+			&__inner {
+				opacity: 0;
+				visibility: hidden;
+				transition: .5s ease;
+
+				@media screen and (max-height: 850px) {
+					display: flex;
+					flex-wrap: wrap;
+					width: 100%;
+					margin: 0px auto;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+				@media screen and (max-width: $medium) {
+					display: flex;
+					flex-wrap: wrap;
+					max-width: 560px;
+					width: 100%;
+					margin: 0px auto;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+				@media screen and (max-width: $small) {
+					max-width: 280px;
+					position: relative;
+					top: auto;
+					left: auto;
+					transform: none;
+				}
+				&.show {
+					opacity: 1;
+					visibility: visible;
+
+					.recipe-circles__circle {
+						&:nth-of-type(1) {
+							animation: recipe-circle .5s cubic-bezier(.42, .97, .52, 1.49);
+							animation-fill-mode: forwards;
+						}
+						&:nth-of-type(2) {
+							animation: recipe-circle .5s cubic-bezier(.42, .97, .52, 1.49);
+							animation-fill-mode: forwards;
+							animation-delay: .45s;
+						}
+						&:nth-of-type(3) {
+							animation: recipe-circle .5s cubic-bezier(.42, .97, .52, 1.49);
+							animation-fill-mode: forwards;
+							animation-delay: .3s;
+						}
+						&:nth-of-type(4) {
+							animation: recipe-circle .5s cubic-bezier(.42, .97, .52, 1.49);
+							animation-fill-mode: forwards;
+							animation-delay: .15s;
+						}
+					}
+				}
+			}
+			&__circle {
+				position: absolute;
+				overflow: hidden;
+				width: 315px;
+				height: 315px;
+				display: block;
+				transform: scale(0);
+
+				@media screen and (max-height: 850px) {
+					width: 250px;
+					height: 250px;
+					position: relative;
+					top: auto !important;
+					right: auto !important;
+					bottom: auto !important;
+					left: auto !important;
+					margin: 15px;
+				}
+				@media screen and (max-width: $large) {
+					width: 20.833vw;
+					height: 20.833vw;
+				}
+				@media screen and (max-width: $medium) {
+					width: 250px;
+					height: 250px;
+					position: relative;
+					top: auto !important;
+					right: auto !important;
+					bottom: auto !important;
+					left: auto !important;
+					margin: 15px;
+				}
+				&:hover {
+					.recipe-circles__circle__overlay {
+						opacity: 1;
+					}
+				}
+				&:nth-of-type(1) {
+					top: 245px;
+
+					@media screen and (max-width: $large) {
+						top: 295px;
+						right: 57.500vw;
+					}
+				}
+				&:nth-of-type(2) {
+					bottom: 55px;
+					left: 160px;
+
+					@media screen and (max-width: $large) {
+						bottom: 155px;
+						left: auto;
+						right: 44.167vw;
+					}
+				}
+				&:nth-of-type(3) {
+					bottom: 225px;
+					right: 260px;
+
+					@media screen and (max-width: $large) {
+						bottom: 265px;
+						right: 21.667vw;
+					}
+				}
+				&:nth-of-type(4) {
+					top: 145px;
+					right: 0px;
+
+					@media screen and (max-width: $large) {
+						top: 215px;
+						right: 4.167vw;
+					}
+				}
+				&__img {
+					width: 315px;
+					height: 315px;
+					border-radius: 50%;
+
+					@media screen and (max-height: 850px) {
+						width: 250px;
+						height: 250px;
+					}
+					@media screen and (max-width: $large) {
+						width: 20.833vw;
+						height: 20.833vw;
+					}
+					@media screen and (max-width: $medium) {
+						width: 250px;
+						height: 250px;
+					}
+					img {
+						width: 315px;
+						height: 315px;
+						border-radius: 50%;
+
+						@media screen and (max-height: 850px) {
+							width: 250px;
+							height: 250px;
+						}
+						@media screen and (max-width: $large) {
+							width: 20.833vw;
+							height: 20.833vw;
+						}
+						@media screen and (max-width: $medium) {
+							width: 250px;
+							height: 250px;
+						}
+					}
+				}
+				&__overlay {
+					background-color: rgba(darken($orange, 10%), .8);
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					width: 315px;
+					height: 315px;
+					border-radius: 50%;
+					opacity: 0;
+					transition: .5s ease;
+
+					@media screen and (max-height: 850px) {
+						width: 250px;
+						height: 250px;
+					}
+					@media screen and (max-width: $large) {
+						width: 20.833vw;
+						height: 20.833vw;
+					}
+					@media screen and (max-width: $medium) {
+						width: 250px;
+						height: 250px;
+					}
+					span {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						width: 100%;
+						padding: 0px 60px;
+						color: $white;
+						font-size: 18px;
+						font-weight: 800;
+						line-height: 22px;
+						text-transform: uppercase;
+
+						@media screen and (max-height: 850px) {
+							padding: 0px 45px;
+							font-size: 16px;
+							line-height: 20px;
+						}
+						@media screen and (max-width: $large) {
+							padding: 0px 5vw;
+							font-size: 1.333vw;
+							line-height: 1.667vw;
+						}
+						@media screen and (max-width: $medium) {
+							padding: 0px 45px;
+							font-size: 16px;
+							line-height: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.scroll-spacer {
+		height: 100vh;
+
+		&.half {
+			height: 70vh;
+		}
+	}
+	.circle-trigger {
+		//height: 50vh;
+		height: 0vh;
+	}
+	.deals-wtb {
+		position: relative;
+		height: 100vh;
+
+		.page-wrapper {
+			max-width: 1500px;
+			height: 100%;
+			position: relative;
+		}
+		.cantaloupe-illustration {
+			width: 100%;
+			max-width: 650px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -60%);
+
+			@media screen and (max-width: 1400px) {
+				max-width: 46.429vw;
+			}
+			@media screen and (max-width: $medium) {
+				max-width: 40vw;
+			}
+			img {
+				width: 100%;
+			}
+		}
+		&__text {
+			position: relative;
+			z-index: 4;
+			height: 100vh;
+
+			&__deals {
+				position: absolute;
+				top: 115px;
+				width: 360px;
+
+				@media screen and (max-width: 1400px) {
+					width: 25.714vw;
+				}
+				@media screen and (max-width: $medium) {
+					width: 360px;
+				}
+				@media screen and (max-height: 750px) {
+					width: 20.714vw;
+				}
+				h3 {
+					font-size: 24px;
+					font-weight: 800;
+					line-height: 30px;
+					text-transform: uppercase;
+					color: $orange;
+					margin-top: 3px;
+					margin-bottom: 35px;
+
+					@media screen and (max-width: $medium) {
+						font-size: 22px;
+						line-height: 26px;
+						margin-bottom: 20px;
+					}
+				}
+				p {
+					color: #4B4B4B;
+
+					@media screen and (max-width: $medium) {
+						font-size: 14px;
+						line-height: 20px;
+					}
+				}
+				.btn-green {
+					margin-top: 15px;
+
+					@media screen and (max-width: $medium) {
+						margin-top: 10px;
+						padding: 12px 35px;
+					}
+				}
+			}
+			&__wtb {
+				position: absolute;
+				bottom: 115px;
+				right: 0px;
+				width: 360px;
+
+				@media screen and (max-width: 1400px) {
+					width: 25.714vw;
+					bottom: 45px;
+				}
+				@media screen and (max-width: $medium) {
+					bottom: 50px;
+					width: 360px;
+				}
+				@media screen and (max-height: 750px) {
+					width: 20.714vw;
+					bottom: 45px;
+				}
+				h3 {
+					font-size: 24px;
+					font-weight: 800;
+					line-height: 30px;
+					text-transform: uppercase;
+					color: $orange;
+					margin-bottom: 35px;
+
+					@media screen and (max-width: $medium) {
+						font-size: 22px;
+						line-height: 26px;
+						margin-bottom: 20px;
+					}
+				}
+				p {
+					color: #4B4B4B;
+
+					@media screen and (max-width: $medium) {
+						font-size: 14px;
+						line-height: 20px;
+					}
+				}
+				.btn-green {
+					margin-top: 15px;
+
+					@media screen and (max-width: $medium) {
+						margin-top: 10px;
+						padding: 12px 35px;
+					}
+				}
+			}
+		}
+		.circular-btn {
+			position: absolute;
+			bottom: 50px;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 5;
+
+			@media screen and (max-height: 850px) and (min-width: 1201px) {
+				left: 50px;
+				transform: none;
+			}
+			@media screen and (max-width: $large) {
+				left: 50px;
+				transform: none;
+			}
+			@media screen and (max-width: $large) and (min-height: 750px) {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			@media screen and (max-width: $medium) {
+				left: 50px;
+				transform: none;
+			}
+			&:hover {
+				.circular-btn__arrow {
+					transform: translate(-50%, -50%) scale(1.25) rotate(90deg);
+				}
+			}
+			&__arrow {
+				transform: translate(-50%, -50%) scale(1) rotate(90deg);
+			}
+		}
+	}
+}
+@keyframes recipe-circle {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+.recipes-fullpage-mobile {
+	display: none;
+	margin-bottom: 50px;
+
+	@media screen and (max-width: $small) {
+		display: block;
+	}
+	.recipes-section {
+		background-color: $orange;
+		padding: 125px 0px 100px;
+		position: relative;
+
+		.recipes-heading {
+			position: relative;
+		}
+		h2 {
+			font-size: 161px;
+			font-weight: 900;
+			line-height: 135px;
+			letter-spacing: -10.06px;
+			text-transform: uppercase;
+			color: $white;
+			text-align: center;
+			margin-bottom: 90px;
+			position: relative;
+			z-index: 1;
+
+			@media screen and (max-width: 500px) {
+				font-size: 32.200vw;
+				line-height: 27vw;
+				letter-spacing: -2.012vw;
+				margin-bottom: 18vw;
+			}
+		}
+		.cantaloupe-img {
+			max-width: 280px;
+			width: 100%;
+			position: absolute;
+			bottom: -60px;
+			left: 50%;
+			transform: translateX(-50%);
+
+			@media screen and (max-width: 500px) {
+				bottom: -12vw;
+				max-width: 56vw;
+			}
+			img {
+				width: 100%;
+			}
+		}
+		.recipes-button {
+			text-align: center;
+
+			.recipes-view-more {
+				padding: 25px 55px;
+				width: 195px;
+				margin-bottom: 93px;
+
+				&.hide {
+					opacity: 0;
+					visibility: hidden;
+					margin-bottom: 0px;
+				}
+			}
+		}
+		.recipe-circles {
+			margin-top: -93px;
+			margin-bottom: -30px;
+
+			&__inner {
+				max-width: 220px;
+				width: 100%;
+				margin: 0px auto;
+				opacity: 0;
+				visibility: hidden;
+				height: 0px;
+				transition: .5s ease;
+
+				&.show {
+					opacity: 1;
+					visibility: visible;
+					height: auto;
+
+					.recipe-circles__circle {
+						&:nth-of-type(1) {
+							animation: recipe-circle .5s cubic-bezier(.42, .97, .52, 1.49);
+							animation-fill-mode: forwards;
+						}
+						&:nth-of-type(2) {
+							animation: recipe-circle .5s cubic-bezier(.42, .97, .52, 1.49);
+							animation-fill-mode: forwards;
+							animation-delay: .15s;
+						}
+						&:nth-of-type(3) {
+							animation: recipe-circle .5s cubic-bezier(.42, .97, .52, 1.49);
+							animation-fill-mode: forwards;
+							animation-delay: .3s;
+						}
+						&:nth-of-type(4) {
+							animation: recipe-circle .5s cubic-bezier(.42, .97, .52, 1.49);
+							animation-fill-mode: forwards;
+							animation-delay: .45s;
+						}
+					}
+				}
+			}
+			&__circle {
+				position: relative;
+				overflow: hidden;
+				width: 220px;
+				height: 220px;
+				margin: 30px 0px;
+				display: block;
+				transform: scale(0);
+
+				&:hover {
+					.recipe-circles__circle__overlay {
+						opacity: 1;
+					}
+				}
+				&__img {
+					width: 220px;
+					height: 220px;
+					border-radius: 50%;
+
+					img {
+						width: 220px;
+						height: 220px;
+						border-radius: 50%;
+					}
+				}
+				&__overlay {
+					background-color: rgba(darken($orange, 10%), .8);
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					width: 220px;
+					height: 220px;
+					border-radius: 50%;
+					opacity: 0;
+					transition: .5s ease;
+
+					span {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						width: 100%;
+						padding: 0px 45px;
+						color: $white;
+						font-size: 16px;
+						font-weight: 800;
+						line-height: 20px;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+	}
+	.deals-wtb {
+		padding: 50px 0px 80px;
+
+		.cantaloupe-illustration {
+			width: 280px;
+			//margin: 50px auto 60px;
+			margin: 0px auto;
+			position: relative;
+			
+			@media screen and (max-width: 500px) {
+				//margin: 30px auto 40px;
+			}
+			.illustration {
+				width: 100%;
+			}
+			.cantaloupe-img {
+				position: absolute;
+				top: 55%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+			}
+		}
+		&__text {
+			&__deals {
+				h3 {
+					font-size: 24px;
+					font-weight: 800;
+					line-height: 30px;
+					text-transform: uppercase;
+					color: $orange;
+					margin-top: 3px;
+					margin-bottom: 35px;
+				}
+				p {
+					color: #4B4B4B;
+				}
+				.btn-green {
+					margin-top: 25px;
+				}
+			}
+			&__wtb {
+				h3 {
+					font-size: 24px;
+					font-weight: 800;
+					line-height: 30px;
+					text-transform: uppercase;
+					color: $orange;
+					margin-bottom: 35px;
+				}
+				p {
+					color: #4B4B4B;
+				}
+				.btn-green {
+					margin-top: 25px;
+				}
+			}
+		}
+	}
+}

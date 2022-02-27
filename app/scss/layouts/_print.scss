@@ -1,0 +1,58 @@
+@media print {
+    header, footer, .social, .recipe-details .hero img, .ingredients__social, .recipe-video, .next-recipe {
+		display: none;
+	}
+	h1, h2, h3, h4, h5, h6, p, ol, ul, li, span {
+		color: $black !important;
+	}
+	.recipe-details {
+		.hero {
+			min-height: auto;
+
+			.page-wrapper {
+				position: relative;
+				top: auto;
+				left: auto;
+				transform: none;
+				width: auto;
+				height: auto;
+				padding: 0px;
+
+				h1 {
+					font-size: 70px;
+					line-height: 60px;
+					letter-spacing: -4px;
+					margin: 0px 20px;
+
+					br {
+						display: none;
+					}
+				}
+			}
+		}
+		.recipe {
+			padding: 70px 0px 0px;
+
+			.col-lg-4 {
+				padding: 0px !important;
+				flex: 100%;
+				max-width: 100%;
+			}
+			.directions {
+				p {
+					height: auto;
+				}
+			}
+			.nutrition-facts {
+				div {
+					background-color: transparent;
+					padding: 30px 0px 0px;
+
+					img {
+						max-width: 400px;
+					}
+				}
+			}
+		}
+	}
+}

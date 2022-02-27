@@ -1,0 +1,49 @@
+.contact {
+	main {
+		padding-top: 0px;
+	}
+	.hero {
+		background-color: $light-green;
+		padding: 100px 0px 80px;
+
+		@media screen and (max-width: $medium) {
+			padding: 50px 0px;
+		}
+		h1 {
+			color: $white;
+			text-align: center;
+			font-size: 5.938vw;
+			font-weight: 800;
+			letter-spacing: -0.394vw;
+			margin-bottom: 50px;
+
+			@media screen and (max-width: $medium) {
+				font-size: 9.719vw;
+				line-height: 8.625vw;
+				letter-spacing: -0.746vw;
+			}
+			@media screen and (max-width: $small) {
+				font-size: 61px;
+				line-height: 56px;
+				letter-spacing: -4.05px;
+				margin-bottom: 25px;
+			}
+		}
+	}
+	&-info {
+		padding: 100px 0px calc(60px - 1rem);
+
+		@media screen and (max-width: $small) {
+			padding: 60px 0 30px;
+		}
+		p {
+			font-size: 17px;
+			line-height: 21px;
+			letter-spacing: -.94px;
+
+			@media screen and (max-width: $small) {
+				font-size: 17px;
+			}
+		}
+	}
+}

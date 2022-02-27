@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="231px" height="232px" viewBox="0 0 231 232" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 16</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="recipes-detail" transform="translate(-524.000000, -3044.000000)" fill-rule="nonzero">
+            <g id="Group-16" transform="translate(524.000000, 3044.110092)">
+                <path d="M170.246431,60.6989626 C125.804696,16.1813074 63.5174477,-5.68955503 1,1.27162334 L229.728363,230 C236.692569,167.455628 214.799838,105.143224 170.246431,60.6989626 Z" id="Path" fill="#8BC53F"></path>
+                <path d="M60.7193116,170.29914 C105.165672,214.823235 167.46897,236.695061 230,229.725813 L1.27994732,1 C-5.70796496,63.5359373 16.1698474,125.849774 60.7193116,170.29914 Z" id="Path" fill="#37B34A"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 16</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="recipes-detail-mobile" transform="translate(-29.000000, -72.000000)">
+            <g id="1" transform="translate(-276.000000, 0.000000)">
+                <g id="Group-3" transform="translate(305.000000, 63.000000)">
+                    <g id="Group-16" transform="translate(0.000000, 9.000000)">
+                        <circle id="Oval-Copy" stroke="#8AC53F" stroke-width="2" cx="28" cy="28" r="27"></circle>
+                        <g id="Group" transform="translate(14.000000, 19.000000)" fill="#8AC53F">
+                            <rect id="Rectangle" x="0" y="0" width="29" height="3"></rect>
+                            <rect id="Rectangle-Copy" x="0" y="8" width="29" height="3"></rect>
+                            <rect id="Rectangle-Copy-2" x="0" y="16" width="29" height="3"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

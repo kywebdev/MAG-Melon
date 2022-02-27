@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="21px" viewBox="0 0 14 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Triangle</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="recipes-detail" transform="translate(-956.000000, -2284.000000)" fill="#F9BE81">
+            <g id="Group-14" transform="translate(269.000000, 1953.000000)">
+                <g id="Group-5" transform="translate(632.000000, 290.000000)">
+                    <polygon id="Triangle" transform="translate(62.000000, 51.500000) rotate(-270.000000) translate(-62.000000, -51.500000) " points="62 45 72 58 52 58"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

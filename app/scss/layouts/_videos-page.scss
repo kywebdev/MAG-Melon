@@ -1,0 +1,136 @@
+.videos-page {
+	.intro {
+		.col-lg-4 {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-end;
+		}
+		&__text-container {
+			@media screen and (max-width: $medium) {
+				margin-top: 50px;
+			}
+			@media screen and (max-width: $small) {
+				margin-top: 40px;
+			}
+			p {
+				width: 100%;
+				max-width: 400px;
+				margin-bottom: 0px;
+
+				@media screen and (max-width: $medium) {
+					margin-bottom: 35px;
+				}
+				@media screen and (max-width: $small) {
+					max-width: none;
+					margin-bottom: 30px;
+				}
+			}
+		}
+		.btn-green {
+			padding: 22px 40px;
+
+			@media screen and (max-width: $small) {
+				width: 100%;
+			}
+		}
+	}
+	.video-grid {
+		margin: 140px 0px 80px;
+
+		@media screen and (max-width: $large) {
+			margin: 100px 0px 50px;
+		}
+		@media screen and (max-width: $medium) {
+			margin: 70px 0px 50px;
+		}
+		@media screen and (max-width: $small) {
+			margin: 35px 0px;
+		}
+		&__video {
+			display: block;
+			position: relative;
+			overflow: hidden;
+
+			@media screen and (max-width: $small) {
+				margin: 15px 0px;
+			}
+			&:hover {
+				> img {
+					transform: scale(1.15);
+				}
+			}
+			img {
+				width: 100%;
+				transform: scale(1);
+				transition: .8s ease;
+			}
+		}
+		.add-link {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			transition: .3s ease-in-out;
+
+			@media screen and (max-width: $small) {
+				padding-top: 0px;
+				height: 100px;
+				padding: 15px 0px;
+			}
+			&:hover {
+				background-color: rgba($black, .1);
+
+				@media screen and (max-width: $small) {
+					background-color: transparent;
+				}
+			}
+		}
+		.play {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) scale(1);
+			transition: .2s ease-in-out;
+
+			&:hover {
+				transform: translate(-50%, -50%) scale(1.1);
+			}
+		}
+	}
+	.video-modal {
+		background-color: rgba(66, 90, 35, .75);
+		padding-right: 0px !important;
+
+		.modal-dialog {
+			@media screen and (max-width: $small) {
+				margin: 65px 25px 35px;
+			}
+		}
+		.modal-content {
+			border: none;
+			border-radius: 0px;
+			background-color: transparent;
+
+			.modal-body {
+				padding: 0px;
+
+				.close {
+					position: absolute;
+					top: -9px;
+					right: -40px;
+					color: $white;
+					text-shadow: none;
+					opacity: 1;
+					font-size: 31px;
+					outline: none;
+
+					@media screen and (max-width: $small) {
+						top: -50px;
+						right: auto;
+						left: 50%;
+						transform: translateX(-50%);
+					}
+				}
+			}
+		}
+	}
+}
